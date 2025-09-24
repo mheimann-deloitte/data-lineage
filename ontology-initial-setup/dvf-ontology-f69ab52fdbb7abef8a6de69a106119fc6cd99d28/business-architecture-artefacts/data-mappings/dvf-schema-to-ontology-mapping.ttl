@@ -1,0 +1,68 @@
+@prefix Common: <https://graph.bmwgroup.net/Ontology/Common/> .
+@prefix DataMapping: <https://graph.bmwgroup.net/Ontology/DataMapping/> .
+@prefix Upper: <https://graph.bmwgroup.net/Ontology/Upper/> .
+@prefix DataLineage: <https://graph.bmwgroup.net/Ontology/DataLineage/> .
+@prefix Data: <https://graph.bmwgroup.net/Data/> .
+@prefix DataSchema: <https://graph.bmwgroup.net/Data/DataSchema/> .
+@prefix Ontology: <https://graph.bmwgroup.net/Ontology/> .
+
+Data:dvf-po-bo-mapping a DataMapping:DataMapping ;
+    Common:hasType Data:1b650736-8e81-45d9-8d58-17821e5c748f ;
+    Common:version "1.0" ;
+    Upper:name "DVF PO to BO Mapping" .
+
+Data:dvf-po-bo-model-maping-1 a DataMapping:ModelMapping ;
+    Common:isPartOf Data:dvf-po-bo-mapping ;
+    DataMapping:mapsFrom DataSchema:DataSchema/Dvf:DVF-1.0 ;
+    DataMapping:mapsTo Ontology:DigitalVehicleTwinOntology .
+
+Data:dvf-po-bo-entity-mapping-1 a DataMapping:EntityMapping ;
+    Common:isPartOf Data:dvf-po-bo-model-maping-1 ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Vehicle ;
+    DataMapping:mapsTo Ontology:Vehicle/Vehicle .
+
+Data:dvf-po-bo-element-mapping-1 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvf-po-bo-entity-mapping-1;
+    Common:involves Ontology:Vehicle/Vehicle ;
+    DataMapping:mapsFrom DataSchema:DataElement/Dvf:DVF-1.0/Vehicle/vin ;
+    DataMapping:mapsTo Ontology:Vehicle/vehicleIdentificationNumber .
+
+Data:dvf-po-bo-entity-mapping-2 a DataMapping:EntityMapping ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Hvb ;
+    DataMapping:mapsTo Ontology:Battery/Battery .
+
+Data:dvf-po-bo-element-mapping-2 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvf-po-bo-entity-mapping-2 ;
+    Common:involves Ontology:Battery/Battery ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Hvb/HvbUid ;
+    DataMapping:mapsTo Ontology:DigitalVehicleTwin/hvbUId .
+
+Data:dvf-po-bo-element-mapping-3 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvf-po-bo-entity-mapping-2 ;
+    Common:involves Ontology:Battery/Battery ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Hvb/productionDate ;
+    DataMapping:mapsTo Ontology:DigitalVehicleTwin/builtTimestamp .
+
+Data:dvf-po-bo-element-mapping-4 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvf-po-bo-entity-mapping-2 ;
+    Common:involves Ontology:Battery/Battery ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Hvb/cellPerformanceId ;
+    DataMapping:mapsTo Ontology:DigitalVehicleTwin/builtTimestamp .
+
+Data:dvf-po-bo-element-mapping-5 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvf-po-bo-entity-mapping-2 ;
+    Common:involves Ontology:Battery/Battery ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Hvb/cellPerformanceCrc ;
+    DataMapping:mapsTo Ontology:DigitalVehicleTwin/builtTimestamp .
+
+Data:dvf-po-bo-element-mapping-6 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvf-po-bo-entity-mapping-2 ;
+    Common:involves Ontology:Battery/Battery ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Hvb/cellContactSystemId ;
+    DataMapping:mapsTo Ontology:DigitalVehicleTwin/builtTimestamp .
+
+Data:dvf-po-bo-element-mapping-7 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvf-po-bo-entity-mapping-2 ;
+    Common:involves Ontology:Battery/Battery ;
+    DataMapping:mapsFrom DataSchema:DataEntity/Dvf:DVF-1.0/Hvb/cellContactSystemCrc ;
+    DataMapping:mapsTo Ontology:DigitalVehicleTwin/builtTimestamp .

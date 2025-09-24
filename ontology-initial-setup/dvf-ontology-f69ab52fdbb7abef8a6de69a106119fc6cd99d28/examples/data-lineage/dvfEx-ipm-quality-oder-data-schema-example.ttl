@@ -1,0 +1,368 @@
+@prefix Common: <https://graph.bmwgroup.net/Ontology/Common/#> .
+@prefix DataSchema: <https://graph.bmwgroup.net/Ontology/DataSchema/DataSchema/> .
+@prefix Upper: <https://graph.bmwgroup.net/Ontology/Upper/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix Data: <https://graph.bmwgroup.net/Data/> .
+
+Data:dvfEx--ipmQualityOrder-1.0 a DataSchema:DataSchema ;
+    DataSchema:hasDataSchemaType Data:49901755-b53b-437a-9c7e-e3bf3ffcacc1 ;
+    Upper:name "IPM - Quality Order" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder a DataSchema:DataEntity ;
+    Common:isDefinedBy Data:dvfEx--ipmQualityOrder-1.0 ;
+    Upper:name "Quality Order Message" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--type a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "type" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityOrderId a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "qualityOrderId" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    Upper:name "physicalPart" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--physicalPartId a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "physicalPartId" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--materialNumber a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "materialNumber" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--materialChangeIndex a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "materialChangeIndex" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--materialNumberIndexed a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "materialNumberIndexed" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--materialDescription a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "materialDescription" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--componentCarrierId a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "componentCarrierId" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--supplierId a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "supplierId" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--assemblyType a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "assemblyType" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    Upper:name "children" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart, Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--children ;
+    Upper:name "additionalProperties" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--partCode a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "partCode" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--partCodeShortDescription a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "partCodeShortDescription" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--masterPartCode a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "masterPartCode" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--masterPartCodeDescription a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "masterPartCodeDescription" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--identification a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "identification" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--identNumber a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "identNumber" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--additionalId a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "additionalId" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--itemNumber a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "itemNumber" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--type a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "type" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--variant a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "variant" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--ipmPartNumber a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "ipmPartNumber" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties--additionalInformation a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "additionalInformation" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    Upper:name "processStep" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--regionName a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "regionName" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--propertyNumber a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "propertyNumber" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--technology a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "technology" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--productionLineId a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "productionLineId" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--productionResource a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "productionResource" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--productionStep a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "productionStep" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--toolId a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "toolId" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--workstation a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "workstation" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--station a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "station" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep ;
+    Upper:name "additionalProperties" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--stationType a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "stationType" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--stationTypeMeaning a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "stationTypeMeaning" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--lastStepReached a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "lastStepReached" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--programmNumber a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "programmNumber" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--workSequence a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "workSequence" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--tighteningProcess a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "tighteningProcess" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--afoText a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "afoText" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--toolType a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "toolType" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--toolTypeMeaning a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "toolTypeMeaning" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--manufacturer a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "manufacturer" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--model a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "model" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--mainTool a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "mainTool" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--hierarchyKeys a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "hierarchyKeys" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--hierarchyValues a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "hierarchyValues" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties--additionalToolInformation a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--processStep--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "additionalToolInformation" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--timestamp a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "timestamp" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    Upper:name "qualityAssessment" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--result a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "result" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment ;
+    Upper:name "inspections" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--mode a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "mode" .  
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--result a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "result" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections ;
+    Upper:name "measurement" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--actualValue a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "actualValue" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement ;
+    Upper:name "additionalProperties" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties--stepNumber a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "stepNumber" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties--type a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "type" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties--typeMeaning a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "typeMeaning" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties--identification a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "identification" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties--curve a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "curve" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties--actualValueType a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "actualValueType" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--additionalProperties a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment ;
+    Upper:name "additionalProperties" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--additionalProperties--statusMeaning a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "statusMeaning" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--additionalProperties--status a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--additionalProperties ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "status" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--reworks a DataSchema:DataEntity ;
+    DataSchema:isNestedBy Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    Upper:name "reworks" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--reworks--activities a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--reworks ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "activities" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--defects a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "defects" .
+
+Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--version a DataSchema:DataElement ;
+    Common:isPartOf Data:dvfEx--ipmQualityOrder-1.0--QualityOrder ;
+    DataSchema:minimumCardinality 1 ;
+    Upper:name "version" .

@@ -1,0 +1,103 @@
+@prefix Common: <https://graph.bmwgroup.net/Ontology/Common/> .
+@prefix DataMapping: <https://graph.bmwgroup.net/Ontology/DataMapping/> .
+@prefix Upper: <https://graph.bmwgroup.net/Ontology/Upper/> .
+@prefix DataLineage: <https://graph.bmwgroup.net/Ontology/DataLineage/> .
+@prefix Data: <https://graph.bmwgroup.net/Data/> .
+
+
+Data:dvfEx--po-po-mapping a DataMapping:DataMapping ;
+    Common:hasType Data:7dd28962-4812-40cf-a8a1-2b31355bf7df ;
+    Common:version "1.0" ;
+    Upper:name "DVF PO to PO Mapping" .
+
+Data:dvfEx--po-po-model-mapping-1 a DataMapping:ModelMapping ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    Common:hasStatus Data:dvfEx--mapping-status-in-progress ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0 ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0 .
+
+Data:dvfEx--po-po-entity-mapping-1 a DataMapping:EntityMapping ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrderphysicalPart ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb .
+
+Data:dvfEx--po-po-element-mapping-1 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvfEx--po-po-entity-mapping-1 ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--physicalPart--physicalPartId ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb--HvbUid .
+
+Data:dvfEx--po-po-entity-mapping-2 a DataMapping:EntityMapping ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb .
+
+Data:dvfEx--po-po-element-mapping-2 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvfEx--po-po-entity-mapping-2 ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--actualValue ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb--cellPerformanceId .
+
+Data:dvfEx--po-po-entity-mapping-3 a DataMapping:EntityMapping ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb .
+
+Data:dvfEx--po-po-element-mapping-3 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvfEx--po-po-entity-mapping-3 ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--actualValue ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb--cellPerformanceCrc .
+
+Data:dvfEx--po-po-entity-mapping-4 a DataMapping:EntityMapping ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb .
+
+Data:dvfEx--po-po-element-mapping-4 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvfEx--po-po-entity-mapping-4 ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--actualValue ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb--cellContactSystemId .
+
+Data:dvfEx--po-po-entity-mapping-5 a DataMapping:EntityMapping ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb .
+
+Data:dvfEx--po-po-element-mapping-5 a DataMapping:ElementMapping ;
+    Common:belongsTo Data:dvfEx--po-po-entity-mapping-5 ;
+    Common:isPartOf Data:dvfEx--po-po-mapping ;
+    DataMapping:mapsFrom Data:dvfEx--ipmQualityOrder-1.0--QualityOrder--qualityAssessment--inspections--measurement--actualValue ;
+    DataMapping:mapsTo Data:dvfEx--dvf-1.0--Hvb--cellContactSystemCrc .
+
+Data:dvfEx--mapping-status-in-progress a DataMapping:MappingStatus ;
+    Upper:name "In Progress".
+
+Data:dvfEx--po-po-mapping-transformation-1 a DataMapping:MappingTransformation ;
+    DataMapping:hasTransformationQuery Data:dvfEx--transformationQuery-1 ;
+    Common:isInvolvedIn Data:dvfEx--po-po-element-mapping-2 .
+
+Data:dvfEx--transformationQuery-1 a DataMapping:TransformationQuery ;
+    DataMapping:query "$.qualityAssessment.inspections.[*].measurement.actualValue where $.qualityAssessment.inspections.[*].measurement.additionalProperties.identification = 'CELLID'" .
+
+Data:dvfEx--po-po-mapping-transformation-2 a DataMapping:MappingTransformation ;
+    DataMapping:hasTransformationQuery Data:dvfEx--transformationQuery-2 ;
+    Common:isInvolvedIn Data:dvfEx--po-po-element-mapping-3 .
+
+Data:dvfEx--transformationQuery-2 a DataMapping:TransformationQuery ;
+    DataMapping:query "$.qualityAssessment.inspections.[*].measurement.actualValue where $.qualityAssessment.inspections.[*].measurement.additionalProperties.identification = 'CELLCRC'" .
+
+Data:dvfEx--po-po-mapping-transformation-3 a DataMapping:MappingTransformation ;
+    DataMapping:hasTransformationQuery Data:dvfEx--transformationQuery-3 ;
+    Data:dvfEx--po-po-element-mapping-4 .
+
+Data:dvfEx--transformationQuery-3 a DataMapping:TransformationQuery ;
+    DataMapping:query "$.qualityAssessment.inspections.[*].measurement.actualValue where $.qualityAssessment.inspections.[*].measurement.additionalProperties.identification = 'CCSID'" .
+
+Data:dvfEx--po-po-mapping-transformation-4 a DataMapping:MappingTransformation ;
+    DataMapping:hasTransformationQuery Data:dvfEx--transformationQuery-4 ;
+    Common:isInvolvedIn Data:dvfEx--po-po-element-mapping-5 .
+
+Data:dvfEx--transformationQuery-4 a DataMapping:TransformationQuery ;
+    DataMapping:query "	$.qualityAssessment.inspections.[*].measurement.actualValue where $.qualityAssessment.inspections.[*].measurement.additionalProperties.identification = 'CCSCRC'" .

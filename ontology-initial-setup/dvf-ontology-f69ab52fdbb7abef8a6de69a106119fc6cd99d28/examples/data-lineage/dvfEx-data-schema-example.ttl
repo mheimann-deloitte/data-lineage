@@ -1,0 +1,70 @@
+@prefix Common: <https://graph.bmwgroup.net/Ontology/Common/#> .
+@prefix DataSchema: <https://graph.bmwgroup.net/Ontology/DataSchema/> .
+@prefix Upper: <https://graph.bmwgroup.net/Ontology/Upper/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix Data: <https://graph.bmwgroup.net/Data/#> .
+
+Data:dvfEx--dvf-1.0 a DataSchema:DataSchema;
+    DataSchema:hasDataSchemaType Data:49901755-b53b-437a-9c7e-e3bf3ffcacc1;
+    Upper:name "DVF PO" .
+
+Data:dvfEx--dvf-1.0--Vehicle a DataSchema:DataEntity;
+    Common:isDefinedBy Data:dvfEx--dvf-1.0;
+    Upper:name "Vehicle" .
+
+Data:dvfEx--dvf-1.0--VehicleDVF-1.--vin a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--Vehicle;
+    DataSchema:minimumCardinality 1;
+    Upper:name "vin" .
+
+Data:dvfEx--dvf-1.0--Hvb a DataSchema:DataEntity;
+    Common:isDefinedBy Data:dvfEx--dvf-1.0;
+    Upper:name "Hvb" .
+
+Data:dvfEx--dvf-1.0--Hvb--HvbUid a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--Hvb;
+    DataSchema:minimumCardinality 1;
+    Upper:name "HvbUid" .
+
+Data:dvfEx--dvf-1.0--Hvb--productionDate a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--Hvb;
+    DataSchema:minimumCardinality 1;
+    Upper:name "productionDate" .
+
+Data:dvfEx--dvf-1.0--Hvb--cellPerformanceId a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--Hvb;
+    DataSchema:minimumCardinality 1;
+    Upper:name "cellPerformanceId" .
+
+Data:dvfEx--dvf-1.0--Hvb--cellPerformanceCrc a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--Hvb;
+    DataSchema:minimumCardinality 1;
+    Upper:name "cellPerformanceCrc" .
+
+Data:dvfEx--dvf-1.0--Hvb--cellContactSystemId a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--Hvb;
+    DataSchema:minimumCardinality 1;
+    Upper:name "cellContactSystemId" .
+
+Data:dvfEx--dvf-1.0--Hvb--cellContactSystemCrc a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--Hvb;
+    DataSchema:minimumCardinality 1;
+    Upper:name "cellContactSystemCrc" .
+
+Data:dvfEx--dvf-1.0--HvbModule a DataSchema:DataEntity;
+    Common:isDefinedBy Data:dvfEx--dvf-1.0;
+    Upper:name "Hvb Module" .
+
+Data:dvfEx--dvf-1.0--HvbCell a DataSchema:DataEntity;
+    Common:isDefinedBy Data:dvfEx--dvf-1.0;
+    Upper:name "Hvb Cell" .
+
+Data:dvfEx--dvf-1.0--inspection a DataSchema:DataEntity;
+    Common:isDefinedBy Data:dvfEx--dvf-1.0;
+    Upper:name "inspection" .
+
+Data:dvfEx--dvf-1.0--inspection--Timestamp a DataSchema:DataElement;
+    Common:isPartOf Data:dvfEx--dvf-1.0--inspection;
+    DataSchema:minimumCardinality 1;
+    Upper:name "timestamp" .
